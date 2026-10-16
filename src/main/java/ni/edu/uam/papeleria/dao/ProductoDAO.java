@@ -10,13 +10,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Clase DAO que centraliza todas las operaciones SQL (consultas, filtros y CRUD)
- * sobre la tabla public.producto utilizando JDBC y PreparedStatement. */
+
 public class ProductoDAO {
 
-    /**
-     * Obtiene todos los productos de la base de datos ordenados por código ascendente. */
+    /** Obtiene todos los productos de la base de datos ordenados por código ascendente. */
     public List<Producto> obtenerTodos() throws SQLException {
         List<Producto> lista = new ArrayList<>();
         String sql = "SELECT id_producto, codigo, nombre, categoria, precio, stock " +
@@ -34,9 +31,7 @@ public class ProductoDAO {
         return lista;
     }
 
-    /**
-     * Busca productos en PostgreSQL combinando filtros mediante condiciones AND.
-     * Ignora mayúsculas y minúsculas en la búsqueda por código o nombre. */
+    /** Busca productos en PostgreSQL combinando filtros mediante condiciones AND.*/
     public List<Producto> buscarConFiltros(String texto, String categoria, boolean soloConExistencias) throws SQLException {
         List<Producto> lista = new ArrayList<>();
         StringBuilder sql = new StringBuilder(

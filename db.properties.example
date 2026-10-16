@@ -1,0 +1,4 @@
+# reemplace los valores con sus credenciales locales.
+db.url=jdbc:postgresql://localhost:5432/papeleria_campus
+db.user=postgres
+db.password=ESCRIBIR_CONTRASEÑA_AQUI
